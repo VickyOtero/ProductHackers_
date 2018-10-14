@@ -1,0 +1,74 @@
+@mixin sectiontitle {
+    margin-bottom: 2rem;
+    color: $red-dark;
+    font-size: 1.375rem;
+    font-weight: 600;
+    line-height: 1.3;
+    text-transform: uppercase;
+
+    @include respond-to($phone-port-land) {
+        font-size: 1rem;
+        line-height: 1;
+    }
+}
+
+@mixin newstitle {
+    color: #454545;
+    font-family: 'Montserrat', sans-serif;
+}
+
+@mixin sectiontxt {
+    color: $grey-dark;
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+@mixin authortxt {
+    display: inline-block;
+    float: left;
+    padding-right: 1rem;
+    color: $red-light;
+    font-size: 1.0652rem;
+    font-weight: 600;
+
+    em {
+        font-style: normal;
+    }
+}
+
+@mixin actionbutton {
+    font-size: 1rem;
+    line-height: 1;
+    text-shadow: none;
+    border: none;
+    max-width: 100%;
+    padding: 1rem;
+
+    @include border-radius(0.25rem);
+
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+@mixin flex {
+    display: flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+}
+
+@mixin border-radius($radius) {
+    border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+}
